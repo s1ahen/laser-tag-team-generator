@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laser Tag Team Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><i class="fas fa-bullseye"></i> AFOKS Laser Tag</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="modes.html">Game Modes</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Laser Tag Team Generator</h1>
+        <div class="player-inputs">
+            <h2>Add Players</h2>
+            <div class="player-count-buttons">
+                <button onclick="setPlayerCount(2)">2 Players</button>
+                <button onclick="setPlayerCount(4)">4 Players</button>
+                <button onclick="setPlayerCount(6)">6 Players</button>
+            </div>
+            <div id="player-names">
+                <!-- Player inputs will be added here dynamically -->
+            </div>
+        </div>
+        <div class="spawn-points">
+            <h2>Set Spawn Points</h2>
+            <label for="spawn-points-count">Number of Spawn Points:</label>
+            <input type="number" id="spawn-points-count" name="spawn-points-count" min="1" max="10">
+            <button onclick="setSpawnPointInputs()">Set Spawn Points</button>
+            <div id="spawn-points-names">
+                <!-- Spawn point inputs will be added here dynamically -->
+            </div>
+        </div>
+        <button onclick="generateTeams()">Generate Teams</button>
+        <div id="result">
+            <!-- Teams and spawn points will be displayed here -->
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
 
