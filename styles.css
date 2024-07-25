@@ -1,1 +1,146 @@
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #E7F0DC; /* Updated background color */
+    color: #577445; /* Updated text color */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #597445; /* Updated header background color */
+    padding: 10px;
+    display: flex;
+    justify-content: center; /* Centered navigation items */
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 1.5em;
+    color: #E7F0DC; /* Updated logo color */
+    margin-right: auto;
+}
+
+header nav {
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center navigation links */
+    flex-grow: 1;
+}
+
+header nav a {
+    color: #E7F0DC; /* Updated navigation link color */
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1.2em; /* Slightly larger font size for better visibility */
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 80px 20px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #658147; /* Updated heading color */
+}
+
+h2 {
+    color: #577445; /* Updated subheading color */
+}
+
+.player-inputs, .spawn-points {
+    margin-bottom: 20px;
+}
+
+.player-count-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.player-count-buttons button {
+    background-color: #597445; /* Updated button background color */
+    color: #E7F0DC; /* Updated button text color */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 8px; /* Rounded corners for buttons */
+}
+
+.player-count-buttons button:hover {
+    background-color: #658147; /* Updated hover color */
+}
+
+#player-names input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: calc(100% - 40px);
+    border: 1px solid #597445; /* Updated border color */
+    background-color: #E7F0DC; /* Updated background color */
+    color: #000; /* Text color */
+    font-size: 1em;
+    border-radius: 8px; /* Rounded corners */
+}
+
+#spawn-points-count, #spawn-points-names input {
+    padding: 10px;
+    border: 1px solid #597445; /* Updated border color */
+    background-color: #E7F0DC; /* Updated background color */
+    color: #000; /* Text color */
+    font-size: 1em;
+    border-radius: 8px; /* Rounded corners */
+}
+
+button {
+    background-color: #597445; /* Updated button background color */
+    color: #E7F0DC; /* Updated button text color */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    font-size: 1em;
+    border-radius: 8px; /* Rounded corners for buttons */
+}
+
+button:hover {
+    background-color: #658147; /* Updated hover color */
+}
+
+#result {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #597445; /* Updated result background color */
+    color: #E7F0DC; /* Updated result text color */
+    border-radius: 8px; /* Rounded corners */
+    text-align: left; /* Align text to the left for readability */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#result h2 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.team {
+    background-color: #E7F0DC; /* Background color for teams */
+    border: 1px solid #577445; /* Border color for teams */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px;
+    color: #577445; /* Text color for teams */
+}
 
