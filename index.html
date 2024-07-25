@@ -3,43 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laser Tag Team Generator</title>
+    <title>Team Generator</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
-        <div class="logo">A.F.O.K.S GAMES</div>
+        <div class="logo">AFOKS</div>
         <nav>
             <a href="index.html"><i class="fas fa-home"></i> Home</a>
             <a href="modes.html"><i class="fas fa-gamepad"></i> Game Modes</a>
         </nav>
     </header>
     <main>
-        <h1>Laser Tag Team Generator</h1>
-        <p>Enter player names and select the number of spawn points to generate random teams.</p>
-        
+        <h1>Team Generator</h1>
         <div class="team-generator">
-            <label for="numPlayers">Number of Players:</label>
-            <select id="numPlayers" name="numPlayers">
-                <option value="2">2 Players</option>
-                <option value="4">4 Players</option>
-                <option value="6">6 Players</option>
+            <label for="gameMode">Select Game Mode:</label>
+            <select id="gameMode" onchange="updateGameMode()">
+                <option value="default">Select a Mode</option>
+                <option value="freeForAll">Free-For-All</option>
+                <option value="teamBattle">Team Battle</option>
+                <option value="protectVIP">Protect the VIP</option>
+                <option value="rescueMission">Rescue Mission</option>
             </select>
 
+            <div id="teamSizeInput" style="display: none;">
+                <label for="teamSize">Number of Players per Team:</label>
+                <input type="number" id="teamSize" min="1">
+            </div>
+
+            <div id="vipInput" style="display: none;">
+                <label for="vip">Select VIP:</label>
+                <input type="text" id="vip" placeholder="Enter VIP name">
+            </div>
+
+            <div id="hostageInput" style="display: none;">
+                <label for="hostage">Select Hostage:</label>
+                <input type="text" id="hostage" placeholder="Enter Hostage name">
+            </div>
+
+            <label for="numPlayers">Number of Players:</label>
+            <input type="number" id="numPlayers" min="2">
+
+            <label for="playerNames">Player Names (comma separated):</label>
+            <input type="text" id="playerNames" placeholder="Enter player names">
+
             <label for="spawnPoints">Number of Spawn Points:</label>
-            <input type="number" id="spawnPoints" name="spawnPoints" min="1" placeholder="Enter number">
+            <input type="number" id="spawnPoints" min="1">
 
-            <label for="playerNames">Player Names (comma-separated):</label>
-            <input type="text" id="playerNames" name="playerNames" placeholder="e.g., Alice, Bob, Charlie">
-
-            <label for="spawnNames">Spawn Point Names (comma-separated):</label>
-            <input type="text" id="spawnNames" name="spawnNames" placeholder="e.g., Point 1, Point 2">
+            <label for="spawnNames">Spawn Point Names (comma separated):</label>
+            <input type="text" id="spawnNames" placeholder="Enter spawn point names">
 
             <button onclick="generateTeams()">Generate Teams</button>
         </div>
-
-        <div id="teamDisplay" class="team-display"></div>
+        <div id="teamDisplay"></div>
     </main>
     <footer>
         <p>&copy; 2024 AFOKS. All rights reserved.</p>
