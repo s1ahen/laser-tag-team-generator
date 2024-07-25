@@ -10,7 +10,7 @@ body {
 
 header {
     background-color: #597445;
-    padding: 10px;
+    padding: 15px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,7 +21,7 @@ header {
 }
 
 header .logo {
-    font-size: 1.5em;
+    font-size: 1.8em;
     color: #E7F0DC;
     margin-right: 20px;
 }
@@ -30,12 +30,11 @@ header nav {
     display: flex;
     align-items: center;
     flex-direction: row;
-    justify-content: center;
 }
 
 header nav a {
     color: #E7F0DC;
-    margin: 0 15px;
+    margin: 0 20px;
     text-decoration: none;
     font-size: 1.2em;
     display: flex;
@@ -59,12 +58,13 @@ main {
 /* Home Page Styles */
 h1 {
     color: #658147;
+    margin-bottom: 20px;
 }
 
 input, select, button {
     border-radius: 8px;
-    padding: 10px;
-    margin: 5px;
+    padding: 12px;
+    margin: 10px;
     border: 1px solid #577445;
     font-size: 1em;
     color: #577445;
@@ -102,11 +102,13 @@ button:hover {
 .team-display .team h2 {
     margin-top: 0;
     font-size: 1.2em;
+    color: #658147;
 }
 
 /* Game Modes Page Styles */
 h1 {
     color: #658147;
+    margin-bottom: 20px;
 }
 
 h2 {
@@ -129,6 +131,7 @@ h2 {
 .mode h2 {
     margin-top: 0;
     font-size: 1.2em;
+    color: #658147;
 }
 
 footer {
