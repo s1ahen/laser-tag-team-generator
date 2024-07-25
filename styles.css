@@ -6,6 +6,9 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
@@ -53,6 +56,7 @@ main {
     padding: 80px 20px 20px;
     max-width: 800px;
     margin: 0 auto;
+    flex: 1; /* This allows main content to grow and push footer down */
 }
 
 /* Home Page Styles */
@@ -86,6 +90,10 @@ button:hover {
     background-color: #658147;
 }
 
+.team-generator {
+    text-align: center;
+}
+
 .team-display {
     text-align: left;
     margin: 20px auto;
@@ -103,6 +111,14 @@ button:hover {
     margin-top: 0;
     font-size: 1.2em;
     color: #658147;
+}
+
+input[type="text"] {
+    width: 80%;
+}
+
+input[type="number"] {
+    width: 30%;
 }
 
 /* Game Modes Page Styles */
@@ -139,4 +155,5 @@ footer {
     background-color: #597445;
     color: #E7F0DC;
     text-align: center;
+    margin-top: auto; /* Pushes footer to the bottom */
 }
